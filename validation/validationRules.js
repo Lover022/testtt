@@ -21,7 +21,7 @@ export const validationRules = {
     },
     email: {
         required: true,
-        pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+        pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
         errorMessages: {
             required: "Email is required",
             pattern: "Invalid email address"
@@ -32,9 +32,9 @@ export const validationRules = {
         minLength: 8,
         uppercase: "(?=.*[A-ZА-ЩЬЮЯІЇЄҐ])",
         lowercase: "(?=.*[a-zа-щьюяіїєґ])",
-        number: "(?=.*\d)",
-        specialCharacter: "(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])",
-        noSpace: "\s",
+        number: "(?=.*\\d)",
+        specialCharacter: "(?=.*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?])",
+        noSpace: "\\s",
         errorMessages: {
             required: "Password is required",
             minLength: "Password must be at least 8 characters long",
